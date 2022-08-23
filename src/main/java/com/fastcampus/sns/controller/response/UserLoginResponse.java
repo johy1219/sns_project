@@ -7,18 +7,8 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class UserJoinResponse {
+public class UserLoginResponse {
 
-    private Integer id;
-    private String userName;
-    private UserRole role;
-
-    public static UserJoinResponse fromUser(User user) {
-        return new UserJoinResponse(
-            user.getId(),
-            user.getUserName(),
-            user.getUserRole()
-        );
-    }
-
+    // 로그인이 정상적으로 이루어졌을때 토큰이 반환되도록
+    private String token;
 }
